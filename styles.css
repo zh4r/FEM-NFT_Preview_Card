@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: 'Outfit';
+    font-size: 12pt;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+}
+
+body {
+    background-color: var(--mainBG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1.4rem;
+    width: 330px;
+    height: 540px;
+    background-color: var(--cardBG);
+    border-radius: .7rem;
+
+    .equImg {
+        align-self: center;
+        width: 100%;
+        border-radius: .5rem;
+    }
+}
+
+h1 {
+    letter-spacing: .05rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+p {
+    color: var(--softBlue);
+    font-weight: 300;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+td {
+    color: var(--softBlue);
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+
+    img {
+        margin-right: .5rem;
+    }
+}
+
+td:nth-of-type(1) {
+    color: var(--cyan);
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.144);
+    padding-top: 1rem;
+    font-weight: 300;
+
+    img {
+        margin-right: 1rem;
+        width: 11%;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+
+    span {
+        color: var(--softBlue);
+        margin-right: .3rem;
+    }
+}
+
