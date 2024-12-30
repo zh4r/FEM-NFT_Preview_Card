@@ -24,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    line-height: 1.7rem;
 }
 
 main {
@@ -41,6 +42,7 @@ main {
         border-radius: .6rem;
         background-color: var(--cyan);
         max-height: 17.8rem;
+        margin-bottom: 1rem;
 
         .overlay {
             position: absolute;
@@ -56,19 +58,17 @@ main {
             border-radius: .5rem;
         }
 
-        .equImg:hover {
+        .imgWrap:hover .equImg {
             opacity: .5;
             cursor: pointer;
         }
 
-        .equImg:hover ~ .overlay {
+        .imgWrap:hover .overlay {
             opacity: 1;
+            cursor: pointer;
         }
     }
-}
 
-a {
-    text-decoration: none;
 }
 
 h1,
@@ -78,18 +78,36 @@ h1>a {
     font-size: 1.3rem;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
 
-
-h1>a:hover,
-footer>a:hover {
+a:hover {
     color: var(--cyan);
 }
 
+a::after {
+    content: '';
+    position:absolute;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--cyan);
+    transition: width .2s;
+}
 
+a:hover:after {
+    color: var(--cyan);
+    width: 100%;
+}
 
 p {
     color: var(--softBlue);
     font-weight: 300;
+    margin-top: .4rem;
 }
 
 tr {
@@ -101,7 +119,7 @@ td {
     color: var(--softBlue);
     display: flex;
     align-items: center;
-    font-size: .9rem;
+    font-size: .95rem;
 
     img {
         margin-right: .5rem;
@@ -125,6 +143,11 @@ footer {
         width: 11%;
         border: 1px solid white;
         border-radius: 50%;
+    }
+
+    img:hover {
+        border: 1px solid var(--cyan);
+        cursor: pointer;
     }
 
     span {
