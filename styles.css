@@ -36,18 +36,56 @@ main {
     background-color: var(--cardBG);
     border-radius: .7rem;
 
-    .equImg {
-        align-self: center;
-        width: 100%;
-        border-radius: .5rem;
+    .container {
+        position: relative;
+        border-radius: .6rem;
+        background-color: var(--cyan);
+        max-height: 17.8rem;
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .equImg {
+            align-self: center;
+            width: 100%;
+            border-radius: .5rem;
+        }
+
+        .equImg:hover {
+            opacity: .5;
+            cursor: pointer;
+        }
+
+        .equImg:hover ~ .overlay {
+            opacity: 1;
+        }
     }
 }
 
-h1 {
+a {
+    text-decoration: none;
+}
+
+h1,
+h1>a {
     letter-spacing: .05rem;
     font-weight: 500;
     font-size: 1.3rem;
 }
+
+
+
+h1>a:hover,
+footer>a:hover {
+    color: var(--cyan);
+}
+
+
 
 p {
     color: var(--softBlue);
@@ -94,4 +132,3 @@ footer {
         margin-right: .3rem;
     }
 }
-
