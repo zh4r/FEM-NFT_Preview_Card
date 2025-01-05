@@ -25,6 +25,10 @@
                 <img src="./images/image-equilibrium.jpg" alt="" class="equImg">
                 <img src="./images/icon-view.svg" alt="" class="overlay">
             </div>
+            <div class="popupImgContainer">
+                <span>&times;</span>
+                <img src="./images/image-equilibrium.jpg" alt="" class="popupImg">
+            </div>
         </div>
 
         <h1><a href="#" target="_blank">Equilibrium #3429</a></h1>
@@ -46,6 +50,19 @@
 
     </main>
 
+    <script>
+        document.querySelectorAll('.imgWrap').forEach(image => {
+            image.onclick = () => {
+                console.log('clicked');
+                document.querySelector('.popupImgContainer').style.display = 'block';
+            };
+        });
+        document.querySelector('.popupImgContainer span').onclick = () => {
+                document.querySelector('.popupImgContainer').style.display = 'none';
+        }
+    </script>
+
 </body>
+
 
 </html>

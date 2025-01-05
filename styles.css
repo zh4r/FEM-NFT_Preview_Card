@@ -27,6 +27,44 @@ body {
     line-height: 1.7rem;
 }
 
+main .imgWrap .popupImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .popupImgContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+
+main .popupImgContainer span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: azure;
+    cursor: pointer;
+    z-index: 100;
+}
+
+main .popupImgContainer .popupImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
 main {
     display: flex;
     justify-content: space-between;
@@ -68,7 +106,12 @@ main {
             cursor: pointer;
         }
     }
+}
 
+@media (min-width: 1000px) {
+    main .popupImgContainer .popupImg {
+        width: 40%;
+    }
 }
 
 h1,
@@ -90,7 +133,7 @@ a:hover {
 
 a::after {
     content: '';
-    position:absolute;
+    position: absolute;
     height: 1px;
     left: 0;
     bottom: 0;
