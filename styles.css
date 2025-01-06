@@ -108,11 +108,7 @@ main {
     }
 }
 
-@media (min-width: 1000px) {
-    main .popupImgContainer .popupImg {
-        width: 40%;
-    }
-}
+
 
 h1,
 h1>a {
@@ -196,5 +192,17 @@ footer {
     span {
         color: var(--softBlue);
         margin-right: .3rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    main .popupImgContainer .popupImg {
+        width: 40%;
+    }
+}
+
+@media (max-width: 330px) {
+    .imgWrap {
+        margin-bottom: -.6rem;
     }
 }
